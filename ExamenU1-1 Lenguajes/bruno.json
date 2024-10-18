@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "ExamenU1-1 Lenguajes",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

@@ -150,3 +150,5 @@ C:\Users\JOSUE DAVID\Documents\Lenguaje de Programacion\EXAMEN U1-1 lenguajes\EX
 C:\Users\JOSUE DAVID\Documents\Lenguaje de Programacion\EXAMEN U1-1 lenguajes\EXAMEN-U1-1-Lenguajes\EXAMEN-U1-1-Lenguajes\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\JOSUE DAVID\Documents\Lenguaje de Programacion\EXAMEN U1-1 lenguajes\EXAMEN-U1-1-Lenguajes\EXAMEN-U1-1-Lenguajes\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\JOSUE DAVID\Documents\Lenguaje de Programacion\EXAMEN U1-1 lenguajes\EXAMEN-U1-1-Lenguajes\EXAMEN-U1-1-Lenguajes\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\JOSUE DAVID\Documents\Lenguaje de Programacion\EXAMEN U1-1 lenguajes\EXAMEN-U1-1-Lenguajes\EXAMEN-U1-1-Lenguajes\bin\Debug\net8.0\SeedData\Administraitor.json
+C:\Users\JOSUE DAVID\Documents\Lenguaje de Programacion\EXAMEN U1-1 lenguajes\EXAMEN-U1-1-Lenguajes\EXAMEN-U1-1-Lenguajes\bin\Debug\net8.0\SeedData\RequestforPermision.json

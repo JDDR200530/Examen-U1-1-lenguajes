@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EXAMEN_U1_1_Lenguajes.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class EmpleadoController : ControllerBase
     {
         private List<EmpleadoEntity> empleados;
@@ -28,6 +30,17 @@ namespace EXAMEN_U1_1_Lenguajes.Controllers
             var response = await serviceEmpleados.GetByIdAsynsc(id);
             return StatusCode(response.StatusCode, response);
 
+        }
+        [HttpPost]
+        public async Task<ActionResult<ResponseDto<EmpleadoDto>>> Create(EmpleadoCreateDto dto)
+        {
+            var response = await serviceEmpleados.CreateAsync(dto);
+            return StatusCode(response.StatusCode, new
+            {
+                response.Status,
+                response.Message,
+                response.Data
+            });
         }
         [HttpPut("{id}")]
         public async Task<ActionResult<ResponseDto<List<EmpleadoDto>>>> Edit(EmpleadoEditDto dto, Guid id) 

@@ -11,7 +11,7 @@ var app = builder.Build();
 
 startup.Configure(app, app.Environment);
 
-using (var scope = app.Services.CreateScope())
+using ( var scope = app.Services.CreateScope()) 
 {
     var services = scope.ServiceProvider;
     var loggerFactory = services.GetRequiredService<ILoggerFactory>();
@@ -20,12 +20,11 @@ using (var scope = app.Services.CreateScope())
         var context = services.GetRequiredService<RequestforPermitsDbContext>();
         await RequestforPermitsSeeder.LoadDataAsync(context, loggerFactory);
     }
-    catch (Exception e)
+    catch (Exception ex) 
     {
         var logger = loggerFactory.CreateLogger<Program>();
-        logger.LogError(e, "Error al ejecutar el Seed de datos");
+        logger.LogError(ex, "Error al Ejecutar el Seed de Datos");    
     }
-    //}
-
-    app.Run();
 }
+
+app.Run();

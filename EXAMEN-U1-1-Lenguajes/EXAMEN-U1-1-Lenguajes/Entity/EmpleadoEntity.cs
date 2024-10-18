@@ -28,7 +28,7 @@ namespace EXAMEN_U1_1_Lenguajes.Entity
 
 
         public DateTime Date_of_Admission { get; set; }
-        public virtual IEnumerable<Request_for_Permission> Request { get; set; } 
+        public virtual IEnumerable<PermisosEntity> Request { get; set; } 
 
 
     }

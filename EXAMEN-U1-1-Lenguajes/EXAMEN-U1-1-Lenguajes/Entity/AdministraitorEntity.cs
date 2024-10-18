@@ -1,8 +1,8 @@
 ﻿namespace EXAMEN_U1_1_Lenguajes.Entity
 {
-    public class Administraitor
+    public class AdministraitorEntity
     {
-        public Guid Guid { get; set; }
+        public Guid Id { get; set; }
 
         public string Name { get; set; }
 

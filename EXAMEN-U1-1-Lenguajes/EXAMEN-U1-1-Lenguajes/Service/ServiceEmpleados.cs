@@ -9,13 +9,13 @@ using Microsoft.Identity.Client;
 
 namespace EXAMEN_U1_1_Lenguajes.Service
 {
-    public class ServiceEmpleados : IServiceEmpleados
+    public class ServiceEmpleado : IServiceEmpleados
     {
         private readonly RequestforPermitsDbContext context;
-        private readonly ILogger<ServiceEmpleados> logger;
+        private readonly ILogger<ServiceEmpleado> logger;
         private readonly IMapper mapper;
 
-        public ServiceEmpleados(RequestforPermitsDbContext context, ILogger<ServiceEmpleados> logger, IMapper mapper)
+        public ServiceEmpleado(RequestforPermitsDbContext context, ILogger<ServiceEmpleado> logger, IMapper mapper)
         {
             this.context = context;
             this.logger = logger;
@@ -142,6 +142,6 @@ namespace EXAMEN_U1_1_Lenguajes.Service
             };
         }
 
-
+      
     }
 }

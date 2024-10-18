@@ -15,19 +15,20 @@ namespace EXAMEN_U1_1_Lenguajes.Database
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            var entries = ChangeTracker.Entries().Where(e => e.Entity is Request_for_Permission && (e.State == EntityState.Added || e.State == EntityState.Modified));
-            //foreach (var entry in entries) 
-            //{
-            //    var entity = entry.Entity; as Request_for_Permission;
-            //    if (entity != null && entry.State == EntityState.Added)
-            //    {
-            //        ent
-            //    }
-            //}
+            var entries = ChangeTracker.Entries().Where(e => e.Entity is PermisosEntity && (e.State == EntityState.Added || e.State == EntityState.Modified));
+           
             return base.SaveChangesAsync(cancellationToken);
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<PermisosEntity>()
+                .Property(p => p.Status)
+                .HasConversion<int>(); 
+        }
+
         public DbSet<EmpleadoEntity>Empleados { get; set; }
-        public DbSet<Administraitor>Administraitors { get; set; }
-        public DbSet<Request_for_Permission>Request_For_Permissions { get; set; }
+        public DbSet<AdministraitorEntity>Administraitors { get; set; }
+        public DbSet<PermisosEntity>Permissions { get; set; }
+       
     }
 }

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using EXAMEN_U1_1_Lenguajes.Database.Dto.Administraitor;
 using EXAMEN_U1_1_Lenguajes.Database.Dto.Empleados;
+using EXAMEN_U1_1_Lenguajes.Database.Dto.Request_for_Permission;
 using EXAMEN_U1_1_Lenguajes.Entity;
 using System.Security.AccessControl;
 
@@ -10,6 +12,8 @@ namespace EXAMEN_U1_1_Lenguajes.Database.Dto.Helpers
         public AutoMapperProfile()
         {
             MapsForEmpleados();
+            MapsForAdministrador();
+            MapsForPermisos();
         }
 
         private void MapsForEmpleados()
@@ -19,5 +23,19 @@ namespace EXAMEN_U1_1_Lenguajes.Database.Dto.Helpers
             CreateMap<EmpleadoEditDto, EmpleadoEntity>();
 
         }
+
+        private void MapsForAdministrador()
+        {
+            CreateMap<AdministraitorEntity, Administraitor.AdministraitorDto>();
+            CreateMap<AdministraitorCreateDto, AdministraitorEntity>();
+            CreateMap<AdministraitorEditDto, AdministraitorEntity>();
+        }
+
+        private void MapsForPermisos()
+        {
+            CreateMap<PermisosEntity, RequestforPermisionDto>();
+            CreateMap<RequestforPermisionCreateDto, PermisosEntity>();
+            CreateMap<RequestforPermisionEditDto, PermisosEntity>();
+     } 
     }
 }
