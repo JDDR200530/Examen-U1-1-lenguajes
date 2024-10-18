@@ -1,0 +1,6 @@
+@EXAMEN_U1_1_Lenguajes_HostAddress = http://localhost:5277
+
+GET {{EXAMEN_U1_1_Lenguajes_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
